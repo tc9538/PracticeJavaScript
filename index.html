@@ -5,42 +5,49 @@
         <!--[if lt IE 9]>
                 This is for comments
         <![endif]-->
+        <link rel="stylesheet" href="css/site.css" />
     </head>
     <body>
-        <header>
-            <h1><img src="img/logo.gif"></h1>
-            <p>This is a test</p>
-            <nav>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/about.html">About</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section>
-            <p> May be a <b>little bit</b> boring<i> example</i>...<span>We can store many projects here</span></p>
-            <p>Show <a href="https://github.com/">Github</a> repos</p>
-            <form action="http://wilder.azurewebsites.net/echo" method="POST">
-                <input name="searchPhrase" id="searchPhrase"/> <br/>
-                <input type="checkbox" name="userStars" id="userStars" checked="true"/>
-                <label for="userStars">User Stars?
-                </label><br/>
-                <label for="langChoice">Language: </label>
-                <select name ="langChoice">
-                    <option>All</option>
-                    <option>JavaScript</option>
-                    <option selected>C#</option>
-                    <option>Java</option>
-                    <option>Ruby</option>
-                </select>
-                <br/>
-                <input type="submit" value="search"/>
-               
-            </form>
-        </section>
-       <footer>
-           &copy; 2021 pluralsight tutorial...
-       </footer>
+       <div class="container">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/about.html">About</a></li>
+                    </ul>
+                </nav>
+                <h1><img src="img/logo.gif" class="bordered-image"></h1>
+                <p>This is a test</p>
+                
+            </header>
+            <section id="main">
+                <p> May be a <b>little bit</b> boring<i> example</i>...<span>We can store many projects here</span></p>
+                <p>Show <a href="https://github.com/">Github</a> repos</p>
+                <form action="http://wilder.azurewebsites.net/echo" method="POST" class="bordered-image simple-form">
+                    <label for="searchPhrase">Search Phrase: </label>
+                    <input type="text" name="searchPhrase" id="searchPhrase"/><br/>
+                    <input type="checkbox" name="useStars" id="useStars" checked="true"/>
+                    <label for="useStars">Use Stars?</label><br/>
+                    <label for="langChoice">Language: </label>
+                    <select name ="langChoice">
+                        <option>All</option>
+                        <option>JavaScript</option>
+                        <option selected>C#</option>
+                        <option>Java</option>
+                        <option>Ruby</option>
+                    </select>
+                    <br/>
+                    <input type="submit" value="search"/>
+                
+                </form>
+                <div id="results" class="bordered-image">
+                    This is where the results will be...eventually
+                </div>
+            </section>
+            <footer>
+                &copy; 2021 pluralsight tutorial...
+            </footer>
+       </div>
     </body>
 </html>
