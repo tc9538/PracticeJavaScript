@@ -25,7 +25,7 @@
             <section id="main">
                 <p> May be a <b>little bit</b> boring<i> example</i>...<span>We can store many projects here</span></p>
                 <p>Show <a href="https://github.com/">Github</a> repos</p>
-                <form action="http://wilder.azurewebsites.net/echo" method="POST" class="bordered-image simple-form">
+                <form action="http://wilder.azurewebsites.net/echo" method="POST" class="bordered-image simple-form" id="gitHubSearchForm">
                     <label for="searchPhrase">Search Phrase: </label>
                     <input type="text" name="searchPhrase" id="searchPhrase"/><br/>
                     <input type="checkbox" name="useStars" id="useStars" checked="true"/>
@@ -43,7 +43,8 @@
                 
                 </form>
                 <div id="results" class="bordered-image">
-                    This is where the results will be...eventually
+                    <button id="toggleButton">Hide</button>
+                    <div id="resultList">This is where the results will go...eventually</div>
                 </div>
             </section>
             <footer>
@@ -51,7 +52,8 @@
             </footer>
        </div>
 
-       <script type="text/javaScript" src="js/index.js"></script>
-
+       <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+       <script type="text/javascript" src="js/index.js"></script>
+    
     </body>
 </html>
